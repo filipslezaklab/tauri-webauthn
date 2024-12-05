@@ -1,0 +1,13 @@
+#app {
+    max-width: 100dvw;
+    overflow-x: hidden;
+
+    p {
+        text-wrap: balance;
+    }
+
+    li {
+        max-width: 100%;
+        text-wrap: balance;
+    }
+}
