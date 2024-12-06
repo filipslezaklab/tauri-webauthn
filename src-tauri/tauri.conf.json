@@ -1,44 +1,35 @@
 {
-  "$schema": "https://schema.tauri.app/config/1",
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Test tauri",
+  "version": "0.0.1",
+  "identifier": "com.tauri.webauthn",
   "build": {
     "beforeDevCommand": "pnpm dev",
     "beforeBuildCommand": "pnpm build",
-    "devPath": "http://localhost:1420",
-    "distDir": "../dist"
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:1420"
   },
-  "package": {
-    "productName": "test-webauthn",
-    "version": "0.1.0"
-  },
-  "tauri": {
-    "allowlist": {
-      "all": false,
-      "shell": {
-        "all": false,
-        "open": true
-      }
-    },
-    "windows": [
-      {
-        "title": "test-webauthn",
-        "width": 800,
-        "height": 600
-      }
-    ],
+  "app": {
     "security": {
       "csp": "default-src 'self'; img-src 'self' https:; script-src 'self'; style-src 'self';"
     },
-    "bundle": {
-      "active": true,
-      "targets": "all",
-      "identifier": "com.test-webauthn.app",
-      "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
-      ]
-    }
+    "windows": [
+      {
+        "title": "Tauri App",
+        "width": 1240,
+        "height": 900
+      }
+    ]
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
   }
 }
